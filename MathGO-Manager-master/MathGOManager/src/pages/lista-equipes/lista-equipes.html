@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar hideBackButton>    
+    <ion-title>Equipes</ion-title>
+    <button style="width: 40px; height: 30px;" class="backButton" clear ion-button color="black" icon-only (click)="back()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let team of teams" (click)="editTeam(team)">{{team.getEditableName() || team.getName()}}</button>
+  </ion-list>
+</ion-content>
